@@ -1,0 +1,228 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!--AUTHOR: BRENDAN DILEO, 000879513. USE OF BOOTSTRAP, HELP OF W3SCHOOLS, AND FONTAWESOME ELEMENTS-->
+    <!-- SA0001: I BRENDAN JOHN DILEO, 000879513 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else. -->
+    <title>Assignment 2 - Client Side Web Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!-- Link to Javascript File I have created -->
+    <script src="./website.js"></script>
+    <script>alertUserWelcome()</script>
+    <script>alertUserOptions()</script>
+    
+</head>
+
+<body class="bg-dark">
+    <header id="divHeader" class="container-md">
+        <h1 class="mt-2 bg-light text-center text-dark">
+            <i class="fas">Assignment 2 - JavaScript & Bootstrap</i>
+        </h1>
+        <h3 class="text-center text-light">
+            <i class="fas">By Brendan Dileo, 000879513</i>
+        </h3>
+        <p class="text-light mb-2 pb-3 border-top border-bottom border-light">This is my webpage for Assignment 2 of the Client Side web Programming Course at Mohawk College.
+            I will be incorporating Bootstrap, JavaScript, Fontawesome, HTML, and CSS to make this webpage function.
+            This is my first official Assignment using Javascript. Feel free to test it out for yourself! It consists of various functions,
+            that in turn, lets the user accessing the page interact with it! </p>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fas fa-home">Home</i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#links">
+                        <i class="fas fa-link">Links</i>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-caret-down">Contact Me</i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://github.com/">Github</a></li>
+                      <li><a class="dropdown-item" href="https://discord.com/">Discord</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="https://mail.google.com">Contact me by email</a></li>
+                      <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=DATlRA9l848">Secret Option</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">
+                        <i class="fas fa-ban"> Disabled</i>
+                    </a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav> <!--Ends nav-->
+    </header> <!--Ends header-->
+
+    <main class="container mt-4 bg-light container-fluid">
+        <div id="accordionOne" class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="accordionH2One">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fas">Group 1</i>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="accordionOne" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <div class="row mt-4">
+                            <div class="row border-top border-bottom border-dark text-center">
+                                <h2>
+                                    Group 1
+                                </h2>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6 middle-border d-flex flex-column justify-content-center accordion-body">
+                                <h2 class="text-center">
+                                    <i class="fas fa-calculator"> Range Checker</i>
+                                </h2>
+                                <label for="q1Input">Enter a number, any number: </label>
+                                <input type="text" id="q1Input" placeholder="Example: 16" onchange="group_1_choice_1()">
+        
+                                <button id="q1InputButton" class="btn btn-block btn-outline-success border mt-1">Check</button>
+                                <textarea class="mt-1" id="q1Output" readonly></textarea>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-6 middle-border d-flex flex-column justify-content-center accordion-body">
+                                <h2 class="text-center">
+                                    <i class="fas fa-calendar"> Date Converter</i>
+                                </h2>
+                                <label for="q1Input2">Enter a number to convert to years, months, and days: </label>
+                                <input type="text" id="q1Input2" placeholder="Example: 1500" onchange="group_1_choice_2()">
+                
+                                <button id="q1InputButton2" class="btn btn-block border btn-outline-success mt-1">Convert</button>
+                                <textarea class="mt-1" id="q1Output2" readonly></textarea>
+                
+                            </div> <!-- Ends second column class -->
+                        </div> <!-- Ends the first row class -->
+                    </div> <!--Ends accordion body-->
+                </div> <!--Ends accordion collapse-->
+            </div> <!--Ends first accordion item-->
+
+            <div id="accordionTwo" class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="accordionH2Two">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fas">Group 2</i>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="accordionTwo" data-bs-parent="#accordionTwo">
+                        <div class="accordion-body">
+                            <div class="row mt-4">
+                                <div class="row border-top border-bottom border-dark text-center">
+                                    <h2>
+                                        Group 2
+                                    </h2>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6 middle-border d-flex flex-column justify-content-center">
+                                    <h2 class="text-center">
+                                    <i class="fas fa-arrow-down-a-z"> Vowel Checker</i>
+                                    </h2>
+                                    <label for="q2Input">Enter a letter: </label>
+                                    <input type="text" id="q2Input" placeholder="Example: a" onchange="group_2_choice_1()">
+                        
+                                    <button id="q2InputButton" class="btn btn-block border btn-outline-success mt-1">Check</button>
+                                    <textarea class="mt-1" id="q2Output" readonly></textarea>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-6 middle-border d-flex flex-column justify-content-center">
+                                    <h2 class="text-center">
+                                        <i class="fas fa-divide"> Absolute Sum</i>
+                                    </h2>
+                                    <label for="q2Input2">Enter a integer: </label>
+                                    <input type="text" id="q2Input2" placeholder="Example: 4" onchange="group_2_choice_2()">
+                                
+                                    <button id="q2InputButton2" class="btn btn-block border btn-outline-success mt-1">Calculate</button>
+                                    <textarea class="mt-1" id="q2Output2" readonly></textarea>
+                                
+                                </div> <!-- Ends second column class -->
+                            </div> <!-- Ends the first row class -->
+                        </div> <!--Ends second accordion body-->
+                    </div> <!--Ends second accordion collapse-->
+                </div> <!--Ends second accordion item-->
+            
+
+                <div id="accordionThree" class="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="accordionH2Three">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fas">Group 3</i>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="accordionThree" data-bs-parent="#accordionThree">
+                            <div class="accordion-body">
+
+                                <div class="row mt-4">
+                                    <div class="row border-top border-bottom border-dark text-center">
+                                        <h2>
+                                            Group 3
+                                        </h2>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-12 middle-border d-flex flex-column justify-content-center">
+                                        <h2 class="text-center">
+                                        <i class="fas fa-equals"> Formula Checker</i>
+                                        </h2>
+                                        <label for="q3Input">Enter a formula: </label>
+                                        <input type="text" id="q3Input" placeholder="Example: 4*8, or 4 * 8" onchange="group_3_choice_2()">
+                            
+                                        <button id="q3InputButton" class="btn btn-block border btn-outline-success mt-1">Check</button>
+                                        <textarea class="mt-1" id="q3Output" readonly></textarea>
+                                    </div>
+
+                                </div> <!-- Ends the first row class -->
+                            </div> <!--Ends third accordion body-->
+                        </div> <!-- Ends third accordion collapse-->
+                    </div> <!--Ends third accordion item-->
+                </div> <!--Ends accordion-->
+            </div> <!--Ends accordionTwo-->
+        </div> <!--Ends accordionOne-->
+            
+    </main> <!-- Ends main class -->
+    
+    <footer class="container-md mt-5 bg-light">
+        <h3 id="links" class="text-dark text-center border-top">
+            <i class="fas">Contact Me</i>
+        </h3>
+        <h3 class="text-dark text-center border-top">
+            <i class="fas"></i> Socials
+            <br>
+            <i class="fab fa-github"> </i> 
+            <i class="fab fa-discord"> </i> 
+            <i class="fab fa-linkedin"> </i> 
+            <i class="fab fa-wix"> </i> 
+            <i class="fab fa-x-twitter"> </i> 
+            <i class="fab fa-envelope"> </i> 
+        </h3>
+        <h4 class="text-dark text-center border-top mt-3">
+            <i class="fas">© 2023, Brendan Dileo, Mohawk College. Use of Bootstrap, and FontAwesome Elements.</i>
+        </h4>
+    </footer> <!--Ends footer-->
+</body> <!--Ends body-->
+
+</html>
