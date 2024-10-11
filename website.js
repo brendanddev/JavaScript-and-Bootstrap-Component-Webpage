@@ -1,4 +1,4 @@
-// SA0001: I BRENDAN DILEO, 000879513 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else. //
+// SA0001: I BRENDAN DILEO, certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else. //
 
 // This function is used to alert a message when the user enters the webpage.
 // First I have declared a function named 'promptUser', and inside the functions body the 'setTimeout'
